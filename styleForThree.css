@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #030637;
+    padding: 10px;
+    font-size: initial;
+}
+section{
+    height: 750px;
+    width: 750px;
+    background-color: #DDE6ED;
+    border: solid 1px #DDE6ED;
+}
+button{
+    background-color: #3C0753; 
+    color: white; 
+    width: 250px; 
+    border: 0; 
+    height: 50px; 
+    padding: 0 10px;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+}
+main > div{
+    font-family: 'Press Start 2P', system-ui;
+    color: #910A67;
+    font-size: 150px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0 !important;
+}
+main > div:hover{
+    opacity: 0.6;  
+}
+.point{
+    cursor: pointer;
+}
+.notHover{
+    pointer-events: none;
+}
+@media(max-width: 890px){
+    section{
+        height: 600px;
+        width: 600px;
+    }   
+    button{
+        width: 100%;
+    }
+    main > div{
+        font-size: 100px;
+    }
+}
+@media(max-width: 640px){
+    section{
+        height: 400px;
+        width: 400px;
+    }  
+    main > div{
+        font-size: 60px;
+    } 
+}
+@media(max-width: 420px){
+    section{
+        height: 350px;
+        width: 350px;
+    }   
+    main > div{
+        font-size: 40px;
+    }
+}
+@media(max-width: 380px){
+    section{
+        height: 300px;
+        width: 300px;
+    }  
+    main > div{
+        font-size: 30px;
+    } 
+}
+@media(max-width: 330px){
+    section{
+        height: 200px;
+        width: 200px;
+    }   
+}
+.selected{
+    background-color: #F1F5F8;
+}
